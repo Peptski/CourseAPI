@@ -96,23 +96,4 @@ app.get("/search", (req, res) => {
 	}
 });
 
-const getPassInfo = async (courseCode) => {
-	console.log(courseCode);
-	axios
-		.get(`https://stats.ftek.se/courses/${courseCode}`)
-		.then((ftekData) => {
-			resolved += 1;
-			console.log("JANNE");
-			return [
-				ftekData.passRate,
-				ftekData.averageGrade,
-				ftekData.totalPass,
-			];
-		})
-		.catch((error) => {
-			console.log(error);
-			console.log("JANNE");
-		});
-};
-
 app.listen(3000, () => console.log("API Server is running..."));
