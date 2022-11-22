@@ -83,8 +83,7 @@ app.get("/search", (req, res) => {
 										PassRate: resData[index].data.passRate,
 										AverageGrade:
 											resData[index].data.averageGrade,
-										SampleSize:
-											resData[index].data.totalPass,
+										SampleSize: resData[index].data.total,
 									};
 								} else {
 									return course;
